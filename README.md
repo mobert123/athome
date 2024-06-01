@@ -6,8 +6,8 @@ This repository serves the purpose of storing config files and scripts that I us
 
 The following Services are currently used in my homelab and can be setup according to this documentation.
 
-1. [Dockge](/README.md#dockge)
-2. [Homer](/README.md#homer)
+1. [Dockge](#dockge)
+2. [Homer](#homer)
 
 ## Dockge
 ### Installation
