@@ -1,6 +1,6 @@
 # athome
 
-This repository serves the purpose of storing config files and scripts that I use in my home network.
+This repository serves the purpose of storing config files and scripts that I use at home.
 
 ## Docker Compose
 
