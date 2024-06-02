@@ -2,9 +2,10 @@
 
 This repository serves the purpose of storing config files and scripts that I use in my home network.
 
-## Services
-
-The following Services are currently used in my homelab and can be setup according to this documentation.
+## Docker Compose
 
 1. Dockge
-2. Homer
+2. Uptime Kuma
+3. Homer
+4. Vaultwarden
+5. Paperlss-ngx
