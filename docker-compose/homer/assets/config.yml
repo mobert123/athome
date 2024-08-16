@@ -1,0 +1,204 @@
+---
+# Homepage configuration
+# See https://fontawesome.com/v5/search for icons options
+
+title: "Dashboard"
+subtitle: "homer"
+logo: "logo.png"
+# icon: "fas fa-skull-crossbones" # Optional icon
+
+header: true
+footer: false # set false if you want to hide it.
+
+# Optional theme customization
+theme: default
+colors:
+  light:
+    highlight-primary: "#3367d6"
+    highlight-secondary: "#4285f4"
+    highlight-hover: "#5a95f5"
+    background: "#f5f5f5"
+    card-background: "#ffffff"
+    text: "#363636"
+    text-header: "#ffffff"
+    text-title: "#303030"
+    text-subtitle: "#424242"
+    card-shadow: rgba(0, 0, 0, 0.1)
+    link: "#3273dc"
+    link-hover: "#363636"
+  dark:
+    highlight-primary: "#3367d6"
+    highlight-secondary: "#4285f4"
+    highlight-hover: "#5a95f5"
+    background: "#131313"
+    card-background: "#2b2b2b"
+    text: "#eaeaea"
+    text-header: "#ffffff"
+    text-title: "#fafafa"
+    text-subtitle: "#f5f5f5"
+    card-shadow: rgba(0, 0, 0, 0.4)
+    link: "#3273dc"
+    link-hover: "#ffdd57"
+
+# Optional message
+# message:
+  #url: https://b4bz.io
+  style: "is-dark" # See https://bulma.io/documentation/components/message/#colors for styling options.
+  title: "Demo !"
+  icon: "fa fa-grin"
+  content: "This is a dummy homepage demo. <br /> Find more information on <a href='https://github.com/bastienwirtz/homer'>github.com/bastienwirtz/homer</a>"
+
+# Optional navbar
+# links: [] # Allows for navbar (dark mode, layout, and search) without any links
+links:
+  - name: "homer"
+    icon: "fab fa-github"
+    url: "https://github.com/bastienwirtz/homer"
+    target: "_blank" # optional html a tag target attribute
+#  - name: "Wiki"
+#    icon: "fas fa-book"
+#    url: "https://www.wikipedia.org/"
+  # this will link to a second homer page that will load config from additional-page.yml and keep default config values as in config.yml file
+  # see url field and assets/additional-page.yml.dist used in this example:
+  #- name: "another page!"
+  #  icon: "fas fa-file-alt"
+  #  url: "#additional-page" 
+
+# Services
+# First level array represent a group.
+# Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not be displayed).
+services:
+  - name: "Hypervisor"
+    icon: "fa-solid fa-server"
+    items:
+      - name: "Proxmox"
+        logo: "https://github.com/NX211/homer-icons/blob/master/png/proxmox.png?raw=true"
+        subtitle: "pve01"
+        tag: "host"
+        url: "http://192.168.10.10:8006/"
+        target: "_blank"
+  - name: "Storage"
+    icon: "fa-solid fa-hard-drive"
+    items:
+      - name: "Truenas"
+        logo: "https://raw.githubusercontent.com/NX211/homer-icons/c23d6413b03629d45f80fe8d493224bae38baf23/svg/truenas.svg"
+        subtitle: "truenas"
+        tag: "storage, backup"
+        url: "https://192.168.10.11/"
+        target: "_blank"
+      - name: "Nextcloud"
+        logo: "https://github.com/NX211/homer-icons/blob/master/png/nextcloud.png?raw=true"
+        subtitle: "docker01"
+        tag: "docker, storage, documents, media"
+        url: "https://nextcloud.mobert.io/"
+        target: "_blank"
+  - name: "Manage & Monitor"
+    icon: "fa-solid fa-gears"
+    items:
+      - name: "Dockge"
+        logo: "https://github.com/louislam/dockge/raw/master/frontend/public/icon.svg"
+        subtitle: "docker01"
+        tag: "docker"
+        url: "http://192.168.10.20:5001/"
+        target: "_blank"
+      - name: "Uptime Kuma"
+        logo: "https://raw.githubusercontent.com/NX211/homer-icons/c23d6413b03629d45f80fe8d493224bae38baf23/svg/uptimekuma.svg"
+        subtitle: "docker01"
+        tag: "docker"
+        url: "http://192.168.10.20:3001/"
+        target: "_blank"
+      - name: "Prometheus"
+        logo: "https://raw.githubusercontent.com/NX211/homer-icons/691dc315413a0b644ffbd3b9702f63ebb53a36a5/svg/prometheus.svg"
+        subtitle: "docker01"
+        tag: "docker"
+        url: "http://192.168.10.20:9090/"
+        target: "_blank"
+      - name: "Grafana"
+        logo: "https://raw.githubusercontent.com/NX211/homer-icons/691dc315413a0b644ffbd3b9702f63ebb53a36a5/svg/grafana.svg"
+        subtitle: "docker01"
+        tag: "docker"
+        url: "http://192.168.10.20:3000/"
+        target: "_blank"
+
+
+  - name: "Media"
+    icon: "fa-solid fa-photo-film"
+    items:
+      - name: "Plex"
+        logo: "https://github.com/NX211/homer-icons/blob/master/png/plex.png?raw=true"
+        subtitle: "docker01"
+        tag: "docker, media"
+        url: "http://192.168.10.20:32400/"
+        target: "_blank"
+      - name: "immich"
+        logo: "https://raw.githubusercontent.com/immich-app/immich/main/design/immich-logo.svg"
+        subtitle: "docker01"
+        tag: "docker, media"
+        url: "http://192.168.10.20:2283/"
+        target: "_blank"
+  - name: "Productivity"
+    icon: "fa-solid fa-list-check"
+    items:
+      - name: "Paperless-ngx"
+        logo: "https://github.com/NX211/homer-icons/blob/master/png/paperless-ng.png?raw=true"
+        subtitle: "docker01"
+        tag: "docker, documents"
+        url: "http://192.168.10.20:8000/"
+        target: "_blank"
+      - name: "Vaultwarden Admin Panel"
+        logo: "https://github.com/NX211/homer-icons/blob/master/png/vaultwarden.png?raw=true"
+        subtitle: "docker01"
+        tag: "docker"
+        url: "http://192.168.10.20:4001/admin"
+        target: "_blank"
+      - name: "Handbrake"
+        logo: "https://github.com/NX211/homer-icons/blob/master/png/handbrake.png?raw=true"
+        subtitle: "docker01"
+        tag: "docker, media"
+        url: "http://192.168.10.20:5801/"
+        target: "_blank"
+  - name: "Smart Home Control"
+    icon: "fa-solid fa-house-signal"
+    items:
+      - name: "Home Assistant"
+        logo: "https://raw.githubusercontent.com/NX211/homer-icons/c23d6413b03629d45f80fe8d493224bae38baf23/svg/home-assistant.svg"
+        subtitle: "haos"
+        tag: ""
+        url: "http://192.168.10.12:8123/"
+        target: "_blank"
+      - name: "Zigbee2MQTT"
+        logo: "https://github.com/NX211/homer-icons/blob/master/png/zigbee2mqtt.png?raw=true"
+        subtitle: "docker01"
+        tag: "docker"
+        url: "http://192.168.10.20:8082/"
+        target: "_blank"
+  - name: "Downloads"
+    icon: "fa-solid fa-download"
+    items:
+      - name: "JDownloader 2"
+        logo: "https://github.com/NX211/homer-icons/blob/master/png/jdownloader.png?raw=true"
+        subtitle: "docker01"
+        tag: "docker, download, media"
+        url: "http://192.168.10.20:5800/"
+        target: "_blank"
+  - name: "Network"
+    icon: "fa-solid fa-network-wired"
+    items:
+      - name: "FRITZ!Box 6660 Cable"
+        logo: "https://github.com/NX211/homer-icons/blob/master/png/avmfritzbox.png?raw=true"
+        subtitle: ""
+        tag: ""
+        url: "http://192.168.10.1/"
+        target: "_blank"
+      - name: "Pi-hole"
+        logo: "https://github.com/NX211/homer-icons/blob/master/png/pihole.png?raw=true"
+        subtitle: "pihole"
+        tag: "lxc"
+        url: "http://192.168.10.2/admin"
+        target: "_blank"
+      - name: "Nginx Proxy Manager"
+        logo: "https://github.com/NX211/homer-icons/blob/master/png/nginxproxymanager.png?raw=true"
+        subtitle: "npm"
+        tag: "lxc,docker"
+        url: "http://192.168.10.3:81/login"
+        target: "_blank"
