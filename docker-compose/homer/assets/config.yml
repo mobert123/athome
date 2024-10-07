@@ -10,6 +10,10 @@ logo: "logo.png"
 header: true
 footer: false # set false if you want to hide it.
 
+columns: "4" # "auto" or number (must be a factor of 12: 1, 2, 3, 4, 6, 12)
+connectivityCheck: true # whether you want to display a message when the apps are not accessible anymore (VPN disconnected for example).
+                        # You should set it to true when using an authentication proxy, it also reloads the page when a redirection is detected when checking connectivity.
+
 # Optional theme customization
 theme: default
 colors:
@@ -68,7 +72,7 @@ links:
 # First level array represent a group.
 # Leave only a "items" key if not using group (group name, icon & tagstyle are optional, section separation will not be displayed).
 services:
-  - name: "Hypervisor"
+  - name: "Hypervisor & Storage"
     icon: "fa-solid fa-server"
     items:
       - name: "Proxmox"
@@ -77,20 +81,11 @@ services:
         tag: "host"
         url: "http://192.168.10.10:8006/"
         target: "_blank"
-  - name: "Storage"
-    icon: "fa-solid fa-hard-drive"
-    items:
       - name: "Truenas"
         logo: "https://raw.githubusercontent.com/NX211/homer-icons/c23d6413b03629d45f80fe8d493224bae38baf23/svg/truenas.svg"
         subtitle: "truenas"
         tag: "storage, backup"
         url: "https://192.168.10.11/"
-        target: "_blank"
-      - name: "Nextcloud"
-        logo: "https://github.com/NX211/homer-icons/blob/master/png/nextcloud.png?raw=true"
-        subtitle: "docker01"
-        tag: "docker, storage, documents, media"
-        url: "https://nextcloud.mobert.io/"
         target: "_blank"
   - name: "Manage & Monitor"
     icon: "fa-solid fa-gears"
@@ -119,23 +114,6 @@ services:
         tag: "docker"
         url: "http://192.168.10.20:3000/"
         target: "_blank"
-
-
-  - name: "Media"
-    icon: "fa-solid fa-photo-film"
-    items:
-      - name: "Plex"
-        logo: "https://github.com/NX211/homer-icons/blob/master/png/plex.png?raw=true"
-        subtitle: "docker01"
-        tag: "docker, media"
-        url: "http://192.168.10.20:32400/"
-        target: "_blank"
-      - name: "immich"
-        logo: "https://raw.githubusercontent.com/immich-app/immich/main/design/immich-logo.svg"
-        subtitle: "docker01"
-        tag: "docker, media"
-        url: "http://192.168.10.20:2283/"
-        target: "_blank"
   - name: "Productivity"
     icon: "fa-solid fa-list-check"
     items:
@@ -144,6 +122,12 @@ services:
         subtitle: "docker01"
         tag: "docker, documents"
         url: "http://192.168.10.20:8000/"
+        target: "_blank"
+      - name: "Nextcloud"
+        logo: "https://github.com/NX211/homer-icons/blob/master/png/nextcloud.png?raw=true"
+        subtitle: "docker01"
+        tag: "docker, storage, documents, media"
+        url: "https://nextcloud.mobert.io/"
         target: "_blank"
       - name: "Vaultwarden Admin Panel"
         logo: "https://github.com/NX211/homer-icons/blob/master/png/vaultwarden.png?raw=true"
@@ -156,6 +140,33 @@ services:
         subtitle: "docker01"
         tag: "docker, media"
         url: "http://192.168.10.20:5801/"
+        target: "_blank"
+      - name: "Stirling PDF"
+        logo: "https://raw.githubusercontent.com/Stirling-Tools/Stirling-PDF/main/docs/stirling.png"
+        subtitle: "docker01"
+        tag: "docker, documents"
+        url: "http://192.168.10.20:8083/"
+        target: "_blank"
+  - name: "Media"
+    icon: "fa-solid fa-photo-film"
+    items:
+      - name: "Jellyfin"
+        logo: "https://raw.githubusercontent.com/NX211/homer-icons/691dc315413a0b644ffbd3b9702f63ebb53a36a5/svg/jellyfin.svg"
+        subtitle: "docker01"
+        tag: "docker, media"
+        url: "http://192.168.10.20:8096/"
+        target: "_blank"
+      - name: "immich"
+        logo: "https://raw.githubusercontent.com/immich-app/immich/main/design/immich-logo.svg"
+        subtitle: "docker01"
+        tag: "docker, media"
+        url: "http://192.168.10.20:2283/"
+        target: "_blank"
+      - name: "JDownloader 2"
+        logo: "https://github.com/NX211/homer-icons/blob/master/png/jdownloader.png?raw=true"
+        subtitle: "docker01"
+        tag: "docker, download, media"
+        url: "http://192.168.10.20:5800/"
         target: "_blank"
   - name: "Smart Home Control"
     icon: "fa-solid fa-house-signal"
@@ -171,15 +182,6 @@ services:
         subtitle: "docker01"
         tag: "docker"
         url: "http://192.168.10.20:8082/"
-        target: "_blank"
-  - name: "Downloads"
-    icon: "fa-solid fa-download"
-    items:
-      - name: "JDownloader 2"
-        logo: "https://github.com/NX211/homer-icons/blob/master/png/jdownloader.png?raw=true"
-        subtitle: "docker01"
-        tag: "docker, download, media"
-        url: "http://192.168.10.20:5800/"
         target: "_blank"
   - name: "Network"
     icon: "fa-solid fa-network-wired"
