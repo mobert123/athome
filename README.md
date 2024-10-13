@@ -12,3 +12,5 @@ This repository serves the purpose of storing config files and scripts that I us
 6. Zigbee2MQTT
 
 ## Cronjobs
+
+## Backups with restic
