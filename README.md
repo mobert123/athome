@@ -10,3 +10,5 @@ This repository serves the purpose of storing config files and scripts that I us
 4. Vaultwarden
 5. Paperlss-ngx
 6. Zigbee2MQTT
+
+## Cronjobs
